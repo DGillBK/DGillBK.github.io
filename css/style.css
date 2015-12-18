@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-image: url("stripe.png");
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 980px;
+  height: 735px;
+  background: #592882;
+  margin: 0 auto;
+  margin-top: 25px;
+  box-shadow: inset 8px 8px 0px 0px rgba(44,0,92,1);
+  /*background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;*/
+
+}
+
+
+.newgame.refresh {
+  background-color: #FFF;
+
+}
+
+.newgame {
+  float: left;
+  width: 120px;
+  height: 37px;
+  background-color: #F8E9AD;
+  margin: 16px 0 0 77px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px -2px rgba(44,0,92,1);
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 23px;
+  color: #262626;
+  font-weight: bolder;
+  text-shadow: 2px 2px #FFF;
+  text-align: center;
+  padding-top: 15px;
+  cursor: url("../img/cursor.png"), auto;
+}
+
+
+.gameboard {
+	width: 660px;
+	height: 700px;
+	margin: 0 auto;
+  margin-right: 80px;
+  padding-top: 7px;
+}
+
+
+.cards {
+	float:left;
+	width: 145px;
+	height: 160px;
+	margin: 10px;
+	background: #F8E9AD;
+	border-radius: 10px;
+	box-shadow: 10px 10px 0px -2px rgba(44,0,92,1);
+	background-image: url("../img/question.gif");
+	background-repeat: no-repeat;
+  background-position: center;
+  cursor: url("../img/cursor.png"), auto;
+}
+
+.cards:hover {
+  background-image: url("../img/question.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+
+.trunk.flipped,
+.trunk.found {
+	background-image: url("../img/trunk.png");
+}
+
+.coin10.flipped,
+.coin10.found {
+	background-image: url("../img/10.png");
+}
+
+.coin20.flipped,
+.coin20.found {
+	background-image: url("../img/20.png");
+}
+
+.feather.flipped,
+.feather.found {
+	background-image: url("../img/feather.png");
+}
+
+.fireflower.flipped,
+.fireflower.found {
+	background-image: url("../img/fireflower.png");
+}
+
+.leaf.flipped,
+.leaf.found {
+	background-image: url("../img/leaf.png");
+}
+
+.mushroom.flipped,
+.mushroom.found {
+	background-image: url("../img/mushroom.png");
+}
+
+.star.flipped,
+.star.found {
+	background-image: url("../img/star.png");
+}
+
+
+
+
