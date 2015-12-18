@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 
-	// shuffles the array
+	// shuffle my class array
 	function shuffunction(cards) {
 
 		var tempCards = [];
@@ -33,7 +33,7 @@ $(document).ready(function(){
 			// gets a random number
 			var randomCard = Math.floor(Math.random() * cards.length);
 
-			// see if that number card is still in the array
+			// sees if that number "card" is still in the array
 			if ( randomCard in cards ) {
 
 				// if it is still in the cards array
@@ -43,13 +43,12 @@ $(document).ready(function(){
 				// delete from the old array so it doesnt get used again
 				delete cards[randomCard];
 
-				// update our card count
+				// update card count
 				cardCt--;
 			}
 		}
 		return tempCards;
 	}
-
 
 	var cardsShuffd = shuffunction(cards);
 
