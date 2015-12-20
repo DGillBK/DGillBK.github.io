@@ -62,16 +62,21 @@ body {
 }
 
 .wrapper {
+  position: relative;
   width: 980px;
   height: 735px;
   background: #592882;
   margin: 0 auto;
   margin-top: 25px;
   box-shadow: inset 8px 8px 0px 0px rgba(44,0,92,1);
-  /*background-image: url("../img/logo.svg");
-  background-repeat: no-repeat;*/
-
 }
+  
+
+/*.logo {
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+
+}*/
 
 
 .newgame.refresh {
@@ -169,6 +174,16 @@ body {
 	background-image: url("../img/star.png");
 }
 
+#thelogo{
+  position: absolute;
+  top: 86px;
+  left: 95px;
+  height: 622px;
+  width: 123px;
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+
+}
 
 
 
