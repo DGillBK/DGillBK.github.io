@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+
 	var backgroundAudio = new Audio("sound/background_loop2.mp3");
 	backgroundAudio.loop = true;
 	backgroundAudio.play();
@@ -44,6 +46,7 @@ $(document).ready(function() {
 		var randomClass = cardsShuffd[cardNumber]
 		$(this).addClass("cards " + randomClass);
 	});
+	
 	// new game button
 	$(".newgame").hover(function() {
 		$(this).toggleClass("refresh");
@@ -51,6 +54,7 @@ $(document).ready(function() {
 	$(".newgame").click(function() {
 		location.reload();
 	});
+	
 	var numberofFlipped = 0;
 	var firstChoice;
 	var firstChoiceImg;
@@ -63,7 +67,9 @@ $(document).ready(function() {
 
 	//this is where cards get flipped
 	$(".cards").click(function() {
+		
 		flipAudio.play();
+		
 		numberofFlipped++
 		//console.log('number of flipped cards: '+numberofFlipped);
 		//while in cards, toggle to flipped		
@@ -105,9 +111,8 @@ $(document).ready(function() {
 				
 			} else {
 				console.log("didnt match");
-				//if you've clicked twice....um? set numberofflipped back to 0
-				//not sure what the settimeout does
-				//for all of my cards in my card div that have been flipped and
+				//if you've clicked twice...set numberofflipped back to 0
+				//setTimeout waits 1 sec before flipping back
 				numberofFlipped = 0
 				setTimeout(function() {
 					$('.cards').each(function(card) {
