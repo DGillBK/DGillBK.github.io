@@ -1,13 +1,17 @@
 $(document).ready(function(){
 
+	var backgroundAudio = new Audio("sound/background.mp3");
+	backgroundAudio.loop = true;
+	backgroundAudio.play();
+	backgroundAudio.volume = 0.2;
 
 	var cards = [
 		'trunk',
 		'trunk',
-		'coin10',
-		'coin10',
-		'coin20',
-		'coin20',
+		'poison',
+		'poison',
+		'green',
+		'green',
 		'feather',
 		'feather',
 		'fireflower',
@@ -77,9 +81,16 @@ $(document).ready(function(){
 	var firstChoiceImg;
 	var secondchoice;
 	var secondchoiceimg;
+	var flipAudio = new Audio("sound/select.wav");
+	var matchAudio = new Audio("sound/match.wav");
+	var noMatchAudio = new Audio("sound/no_match.wav");
 
-	//this is my counter
+
+
+	//this is where cards get flipped
 	$( ".cards" ).click(function() {
+
+		flipAudio.play();
 
 		numberofFlipped++
 		//console.log('number of flipped cards: '+numberofFlipped);
@@ -112,7 +123,13 @@ $(document).ready(function(){
 				console.log('match');
 				firstChoice.addClass('found');
 				secondChoice.addClass('found');
-				numberofFlipped = 0 
+				numberofFlipped = 0;
+				
+				setTimeout( function(){
+					matchAudio.play();
+				},500 );
+
+
 			} else {
 				console.log("didnt match");
 				//if you've clicked twice....um? set numberofflipped back to 0
@@ -125,31 +142,9 @@ $(document).ready(function(){
 							$('.cards').removeClass('flipped')
 						}
 					})
+					noMatchAudio.play();
 				},1000);
 			}
 		}
 	});
-
-
-	// need a funcction to check and see if there's
-	// a match when 2 cards are flipped
-
-	//var checkWinner = function() {
-	//var flippedCards = $(".flipped");
-
-	// see if there are 2 "flipped" cards
-	// see if they have identical classes
-
-	//if yes, stay flipped
-	//i can change the class? add "found" remove "flipped"?
-
-	//else
-
-	//if not a match - unflip them
-		//remove "flipped" class	
-
-
-
-
-
 });
