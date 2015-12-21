@@ -55,11 +55,14 @@ $(document).ready(function() {
 		location.reload();
 	});
 	
+	// define any variables that need to exist outside the click
 	var numberofFlipped = 0;
 	var firstChoice;
 	var firstChoiceImg;
 	var secondchoice;
 	var secondchoiceimg;
+
+	// define audio 
 	var flipAudio = new Audio("sound/select.wav");
 	var matchAudio = new Audio("sound/match.wav");
 	var noMatchAudio = new Audio("sound/no_match.wav");
@@ -70,39 +73,44 @@ $(document).ready(function() {
 		
 		flipAudio.play();
 		
-		numberofFlipped++
-		//console.log('number of flipped cards: '+numberofFlipped);
-		//while in cards, toggle to flipped		
+		// add 1 "Flipped" each time a card is clicked
+		numberofFlipped++;
+
+		// flip the card clicked
 		$(this).toggleClass("flipped");
-		// if number of "clicks" is equal to 1, var firstchoice = where
-		// you clicked first, var firstchoiceimg = the background image
-		//of what was clicked - log that image name
+
+		// if number of "clicks" is equal to 1
+		// var firstchoice = where you clicked first
+		// var firstchoiceimg = the background image of what was clicked
 		if (numberofFlipped === 1) {
 			firstChoice = $(this);
 			firstChoiceImg = $(this).css('background-image');
-			//console.log(firstChoiceImg)
 		}
-		// if number of "clicks" is equal to 2, var secondchoice = where
-		// you clicked next, var secondchoiceimg = the background image
-		// of what was clicked - log that image name		
+		// if number of "clicks" is equal to 2
+		// var secondchoice = where you clicked next
+		// var secondchoiceimg = the background image of what was clicked
 		if (numberofFlipped === 2) {
 			secondChoice = $(this);
 			secondChoiceImg = $(this).css('background-image');
-			//console.log(secondChoiceImg)
-			// this looks at the class of both clicked images and if they are
-			// equal, log match. (it doesn't log the match)
+			
+			// this looks at the background-image of both clicked images
+			// if they are equal
 			// and add the class of "found" to the matching cards
 			if (firstChoiceImg === secondChoiceImg) {
-				console.log('match');
+				// console.log('match');
 				firstChoice.addClass('found');
 				secondChoice.addClass('found');
+
+				// reset flipped counter
 				numberofFlipped = 0;
 
+				// see if all cards have been found
 				if ($(".found").length === 16){
-					console.log('you won');
+					//console.log('you won');
 					backgroundAudio.pause();
 					youWonAudio.play();
 				} else {
+					// if not play match sound
 					setTimeout(function() {
 						matchAudio.play();
 					}, 500);
@@ -110,16 +118,14 @@ $(document).ready(function() {
 
 				
 			} else {
-				console.log("didnt match");
+				//console.log("didnt match");
 				//if you've clicked twice...set numberofflipped back to 0
 				//setTimeout waits 1 sec before flipping back
 				numberofFlipped = 0
 				setTimeout(function() {
-					$('.cards').each(function(card) {
-						if (this.classList.contains('found') === false) {
-							$('.cards').removeClass('flipped')
-						}
-					})
+					// find all flipped cards and unflip
+					// "found" cards will stay flipped
+					$('.flipped').removeClass('flipped');
 					noMatchAudio.play();
 				}, 1000);
 			}
