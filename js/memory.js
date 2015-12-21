@@ -3,6 +3,7 @@ $(document).ready(function() {
 	backgroundAudio.loop = true;
 	backgroundAudio.play();
 	backgroundAudio.volume = 0.2;
+	
 	var cards = [
 		'trunk',
 		'trunk',
@@ -58,6 +59,8 @@ $(document).ready(function() {
 	var flipAudio = new Audio("sound/select.wav");
 	var matchAudio = new Audio("sound/match.wav");
 	var noMatchAudio = new Audio("sound/no_match.wav");
+	var youWonAudio = new Audio("sound/you_won.wav");
+
 	//this is where cards get flipped
 	$(".cards").click(function() {
 		flipAudio.play();
@@ -88,9 +91,18 @@ $(document).ready(function() {
 				firstChoice.addClass('found');
 				secondChoice.addClass('found');
 				numberofFlipped = 0;
-				setTimeout(function() {
-					matchAudio.play();
-				}, 500);
+
+				if ($(".found").length === 16){
+					console.log('you won');
+					backgroundAudio.pause();
+					youWonAudio.play();
+				} else {
+					setTimeout(function() {
+						matchAudio.play();
+					}, 500);
+				}
+
+				
 			} else {
 				console.log("didnt match");
 				//if you've clicked twice....um? set numberofflipped back to 0
