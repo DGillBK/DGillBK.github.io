@@ -9,4 +9,3 @@ Use the cursor to choose any 2 cards by clicking them. Did they match? Great! Ke
 If the two cards you chose didn't match, don't worry, just try your best to remember which items were revealed, and where they were positioned on the board.
 Once a mismatched pair has been chosen, they will quickly flip back over, so pay attention and try again!
 
-![Alt text](logo_md.svg)
