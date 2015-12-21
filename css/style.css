@@ -70,13 +70,6 @@ body {
   margin-top: 25px;
   box-shadow: inset 8px 8px 0px 0px rgba(44,0,92,1);
 }
-  
-
-/*.logo {
-  background-image: url("../img/logo.svg");
-  background-repeat: no-repeat;
-
-}*/
 
 
 .newgame.refresh {
@@ -185,7 +178,7 @@ body {
 
 #thelogo{
   position: absolute;
-  top: 86px;
+  top: 95px;
   left: 95px;
   height: 622px;
   width: 123px;
