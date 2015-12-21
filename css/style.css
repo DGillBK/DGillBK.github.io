@@ -139,41 +139,49 @@ body {
 .trunk.flipped,
 .trunk.found {
 	background-image: url("../img/trunk.png");
+  background-color: #51C6AA;
 }
 
 .poison.flipped,
 .poison.found {
 	background-image: url("../img/poison_mushroom.png");
+  background-color: #F8C0FF;
 }
 
 .green.flipped,
 .green.found {
 	background-image: url("../img/green_mushroom.png");
+  background-color: #C2F3A2;
 }
 
 .feather.flipped,
 .feather.found {
 	background-image: url("../img/feather.png");
+  background-color: #F7A0A0;
 }
 
 .fireflower.flipped,
 .fireflower.found {
 	background-image: url("../img/fireflower.png");
+  background-color: #FFF838;
 }
 
 .leaf.flipped,
 .leaf.found {
 	background-image: url("../img/leaf.png");
+  background-color: #BDA0F7;
 }
 
 .mushroom.flipped,
 .mushroom.found {
 	background-image: url("../img/mushroom.png");
+  background-color: #F9C16E;
 }
 
 .star.flipped,
 .star.found {
 	background-image: url("../img/star.png");
+  background-color: #A0D7F7;
 }
 
 #thelogo{
