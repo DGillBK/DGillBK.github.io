@@ -13,3 +13,12 @@ Once a mismatched pair has been chosen, they will quickly flip back over, so pay
 
 
 
+
+Music clips taken from: http://themushroomkingdom.net/media/smb3/wav
+
+Card illustrations inspired by art from Super Mario World 3, re-drawn by me.
+
+Super Memory World logo created by me, inspired by Super Mario World 3.
+
+
+
